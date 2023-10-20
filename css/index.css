@@ -20,7 +20,6 @@
 
 .body-home{
     /* background-color: var(--bg-color); */
-    background-color: #0c0c0c;
     color: var(--text-color);
     overflow-x:  hidden;
     background-image: url(../images/ceeks.png);

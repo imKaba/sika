@@ -85,10 +85,10 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 25px;
-    max-width: 600px;
+    /* max-width: 600px; */
     margin: 25%;
-    margin-top: 270px;
-    padding-bottom: 25px;
+    margin-top: 170px;
+    padding-bottom: 5px;
 }
 
 .grid-item {
