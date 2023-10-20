@@ -88,21 +88,21 @@ body {
     grid-gap: 25px;
     max-width: 600px; /* Adjust the max-width to your preference */
     margin: 0 auto; /* Center the grid horizontally */
-    margin-left: 240px;
-    margin-top: 700px;
+    margin-left: 25%;
+    margin-top: 570px;
     padding-bottom: 25px;
 }
 
 .grid-item {
     
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     border-radius: 10px; /* Add border radius here */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden; /* Add this line to ensure border radius takes effect */
     height: 310px;
     width: 310px;
     transition: transform 0.2s; /* Add transition for hover effect */
-   
+    background-color: white;
 }
 
 .grid-item:hover {
