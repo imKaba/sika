@@ -1,0 +1,257 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    /* border: 1px solid red; */
+}
+
+
+
+:root{
+    --bg-color:#1f1f21;
+    --text-color: #fff;
+    --main-color: #ffae00;
+    --big-font: 7rem;
+    --p-font:1.1rem;
+}
+
+.body-home{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow-x:  hidden;
+    background-image: url(../images/ceeks.png);
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    background-position: center -150px;
+    /* overflow: hidden; */
+}
+
+.filter {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    opacity: 0.65;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 15%;
+    background: transparent;
+    transition: all ease .45s;
+}
+
+header a{
+    color: var(--text-color);
+    font-size: 41px;
+    font-weight: 600;
+}
+
+
+.navbar{
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 1rem;
+}
+.navbar a {
+    font-size: var(--p-font);
+    font-weight: 500;
+    color: var(--text-color);
+    margin: 0 25px;
+    transition: all ease .50s;
+}
+
+.navbar a:hover{
+    color: var(--main-color);
+}
+
+.navbar a.active{
+    color: var(--main-color);
+}
+
+
+.body-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  /* .body-home {
+    display: flex;
+    justify-content: center;
+
+  } */
+
+
+  .container{
+    position: absolute;
+    top: 1px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Rubik', sans-serif;
+    color: var(--main-color);
+    font-weight: lighter;
+
+   
+
+  }
+
+
+  .container-text {
+    font-size: 40px;
+
+    /* margin-top: 200px; */
+    font-weight: lighter;
+    opacity: .8;
+  }
+ 
+  
+/* Styles pour le menu hamburger */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-toggle input {
+    display: none;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+/* Styles pour le menu lorsqu'il est affiché en mode hamburger */
+.menu-toggle input:checked ~ ul.navbar {
+    max-height: 100%;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .body-home {
+        margin-top: 0;
+        padding-top: 0;
+        background-size: 100vw;
+        background-position-y: 2px;
+        /* height: 90vh; */
+    }
+
+    /* menu code */
+    header {
+        margin-top: -10px;
+        padding: 10px;
+
+        
+    }
+
+    header a {
+        font-size: 24px;
+        align-self: flex-start;
+        /* margin-top: 10px; */
+    }
+
+    body > header > a {
+        font-size: 50px;
+
+    }
+
+    body > header > ul {
+        position: relative;
+        right: -450px;
+        top: 50px;
+    }
+    
+    .navbar a {
+        font-size: 18px;
+        margin: 0 10px;
+    }
+
+    .container-text {
+        font-size: 28px;
+    }
+    /* Style pour le menu hamburger */
+    #burger {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+
+        top: 7px;
+        right: 10px;
+    }
+
+    #burger span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px 0;
+        transition: 0.4s;
+    }
+
+    /* Gestion de l'affichage du menu */
+    .menu-opened {
+        right: 0 !important;/* Affichez le menu depuis la droite */
+    }
+
+    /* Style pour la liste du menu de navigation */
+    ul.navbar {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 100px;
+        list-style: none;
+        background-color: #333;
+        overflow-y: auto; /* Ajoutez une barre de défilement si le contenu est trop long */
+        transition: right 0.3s;
+    }
+
+    ul.navbar li {
+        margin: 10px 0;
+    }
+
+
+    .navbar a {
+        margin: 10px 0;
+    }
+    /* end menu code */
+
+    .container-text {
+        margin-top: 150px;
+    }
+    .filter {
+        height: 1000vh;
+        overflow-y: hidden;
+        width: 100%;
+        background-color: black;
+        opacity: 0.65;
+    }
+}
+

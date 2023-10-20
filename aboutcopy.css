@@ -1,0 +1,281 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    /* border: 1px solid red; */
+}
+
+
+
+:root{
+    --bg-color:#0c0c0c;
+    --text-color: #fff;
+    --main-color: #ffae00;
+    --big-font: 7rem;
+    --p-font:1.1rem;
+}
+
+.container {
+    
+    height: 100%;
+    /* border: 2px solid black; */
+    width: 100%;
+    padding-top: 150px;
+
+}
+
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 15%;
+    background: #0c0c0c;
+    transition: all ease .45s;
+}
+
+header a{
+    color: var(--text-color);
+    font-size: 41px;
+    font-weight: 600;
+}
+
+
+.navbar{
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 1rem;
+}
+.navbar a {
+    font-size: var(--p-font);
+    font-weight: 500;
+    color: var(--text-color);
+    margin: 0 25px;
+    transition: all ease .50s;
+}
+
+.navbar a:hover{
+    color: var(--main-color);
+}
+
+.navbar a.active{
+    color: var(--main-color);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url(./images/background.png);
+}
+
+
+
+
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white }
+  }
+  
+
+  body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.image-section {
+    text-align: center;
+}
+
+.image-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-section {
+    padding: 10px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+p {
+    font-size: 14px;
+}
+
+
+.card{
+    background-image: url(./comp.jpg);
+    border-radius: 25px;
+}
+
+.text-section{
+    padding: 30px;
+    margin-top: 250px;
+    background-color: #0c0c0c;
+    height: 270px;
+    /* border-radius: 25px; */
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.text-section h2{
+    color: #ffae00;
+}
+
+.text-section{
+    color: #ffff;
+    text-align: justify;
+}
+
+
+/* responsiveness */
+  
+@media (max-width:768px) {
+
+    header {
+        margin-top: -10px;
+        padding: 10px;
+        /* height: 100px; */
+        background: linear-gradient(to bottom, #0c0c0c 15%, rgba(12, 12, 12, 0) 50%) !important;
+    }
+
+    header a {
+        font-size: 24px;
+        align-self: flex-start;
+        /* margin-top: 10px; */
+    }
+
+    body > header > a {
+        font-size: 50px;
+
+    }
+
+    body > header > ul {
+        position: relative;
+        right: -450px;
+        top: 50px;
+    }
+    
+    .navbar a {
+        font-size: 18px;
+        margin: 0 10px;
+    }
+
+    .container-text {
+        font-size: 28px;
+    }
+    /* Style pour le menu hamburger */
+    #burger {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+
+        top: 7px;
+        right: 10px;
+    }
+
+    #burger span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px 0;
+        transition: 0.4s;
+    }
+
+    /* Gestion de l'affichage du menu */
+    .menu-opened {
+        right: 0 !important;/* Affichez le menu depuis la droite */
+    }
+
+    /* Style pour la liste du menu de navigation */
+    ul.navbar {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 100px;
+        list-style: none;
+        background-color: #333;
+        overflow-y: auto; /* Ajoutez une barre de défilement si le contenu est trop long */
+        transition: right 0.3s;
+    }
+
+    ul.navbar li {
+        margin: 10px 0;
+    }
+
+
+    .navbar a {
+        margin: 10px 0;
+    }
+    /* end menu code */
+
+    
+  }
+
+  
+
+/* Media Query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .card {
+        width: 60%;
+    }
+}
+
+/* Media Query for screens smaller than 480px */
+@media (max-width: 480px) {
+    .card {
+        margin: 10px 0;
+        padding: 10px;
+    }
+
+    /* .text-section {
+        padding: 777px;
+    } */
+
+    h2 {
+        font-size: 25px;
+        line-height: 0px;
+    }
+
+    p {
+        font-size: 22px;
+    }
+}
+
