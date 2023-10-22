@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .tiles {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .tile {
+            width: 50px;
+            height: 50px;
+            background-color: #333;
+            color: #fff;
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5px;
+            transform: perspective(500px) rotateX(0deg);
+            transition: transform 0.5s;
+        }
+    </style>
+    <title>Flipping Tiles</title>
+</head>
+<body>
+    <div class="container">
+        <div class="tiles">
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div> <!-- Space -->
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div> <!-- Space -->
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div> <!-- Space -->
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div> <!-- Space -->
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div> <!-- Space -->
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+        </div>
+    </div>
+    <script>
+        const tiles = document.querySelectorAll('.tile');
+        const text = "The Best is Yet to Come";
+        let index = 0;
+
+        function flipTile() {
+            if (index < tiles.length) {
+                tiles[index].style.transform = "perspective(500px) rotateX(0deg)";
+                if (text[index] !== " ") {
+                    tiles[index].textContent = text[index];
+                }
+                index++;
+                setTimeout(flipTile, 300);
+            }
+        }
+
+        flipTile();
+    </script>
+</body>
+</html>

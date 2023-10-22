@@ -8,6 +8,10 @@
     /* border: 1px solid red; */
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root{
     --bg-color: #0c0c0c;
     --text-color: #fff;
@@ -15,6 +19,7 @@
     --big-font: 7rem;
     --p-font:1.1rem;
 }
+
 
 header{
     position: fixed;
@@ -37,6 +42,7 @@ header a{
     font-weight: 600;
 }
 
+
 .navbar{
     display: flex;
     /* justify-content: space-between; */
@@ -50,7 +56,6 @@ header a{
     transition: all ease .50s;
 }
 
-
 .navbar a:hover{
     color: var(--main-color);
 }
@@ -63,60 +68,67 @@ body {
 
     background-color: #0c0c0c;
     width: 100vw;
+    /* margin: 0; */
     font-family: Arial, sans-serif; 
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100vw;
     overflow-x: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
+    height: 100vh; /* This ensures that the container takes up the full viewport height */
 }
-  
 
-/* CSS for Instagram-like Grid with Fixed Grid Item Size centered in .container */
-.container {
-    /* border: 2px solid white; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    width: 80%;
-    padding: 20px;
-    margin-top: 10px;
-  }
-  
-  .grid {
+
+
+
+.grid {
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px; */
+    /* max-width: 600px; */
+    /* margin: 25%;
+    margin-top: 170px;
+    padding-bottom: 5px; */
     display: grid;
-    grid-template-columns: repeat(3, 200px); /* 3 columns with a fixed width of 200px */
-    grid-auto-rows: 200px; /* Fixed height of 200px */
-    gap: 30px; /* Adjust the gap to your liking */
-    max-width: 1200px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    max-width: 600px;
     width: 100%;
-    justify-content: center; /* Center the grid horizontally within .container */
-    align-content: center; /* Center the grid vertically within .container */
-  }
-  
-  .grid-item {
+    padding-top: 500px;
+}
+
+.grid-item {
+
+    /* border: 1px solid #ccc; */
+    border-radius: 10px; /* Add border radius here */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Add this line to ensure border radius takes effect */
+    height: 310px;
+    width: 310px;
+    transition: transform 0.2s; /* Add transition for hover effect */
     background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px; /* Rounded corners */
-    overflow: hidden;
-    width: 200px; /* Same width as specified in the grid columns */
-    height: 200px; /* Same height as specified in the grid auto-rows */
-  }
-  
-  .grid-item img {
+   
+}
+
+.grid-item:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.grid-item img {
     max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-  }
-  
+    height: auto;
+    display: block;
+    border: #fff solid 5px;
+}
 
 
-  @media (max-width:768px) {
+/* responsiveness */
+
+@media (max-width:768px) {
     /* menu code */
     body {
         width: 100%;
@@ -204,6 +216,7 @@ body {
     /* end of code menu */
 
     .grid {
+        margin-top: 2500px;
         width: 100%;
         margin-left: 0;
         display: flex;
@@ -214,7 +227,6 @@ body {
     .image-container{
         padding-bottom: 24px;
     }
-    .container {
-        margin-top: 1500px;
-    }
+
+
 }
