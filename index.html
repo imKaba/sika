@@ -109,6 +109,12 @@
 
         
         <script>
+            const burger = document.getElementById("burger");
+            const menu = document.querySelector("ul.navbar");
+
+            burger.addEventListener("click", function () {
+                menu.classList.toggle("menu-opened");
+            });
             const tiles = document.querySelectorAll('.tile');
             const text = "The Best is Yet to Come".toUpperCase();
             let index = 0;

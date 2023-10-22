@@ -98,6 +98,7 @@ body {
   }
   
   .grid-item {
+    transition: .3s;
     background-color: white;
     display: flex;
     align-items: center;
@@ -107,7 +108,9 @@ body {
     width: 200px; /* Same width as specified in the grid columns */
     height: 200px; /* Same height as specified in the grid auto-rows */
   }
-  
+  .grid-item:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
   .grid-item img {
     max-width: 100%;
     max-height: 100%;

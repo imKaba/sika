@@ -256,5 +256,13 @@ header a{
         background-color: black;
         opacity: 0.65;
     }
+
+    .tiles {
+        width: 450px;
+
+    }
+    .tile {
+        font-size: 32px;
+    }
 }
 
