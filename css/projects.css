@@ -63,7 +63,7 @@ body {
 
     /* background-color: #0c0c0c; */
     background-image: url(../images/sure_last_one.png);
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: 100vw;
     width: 100vw;
     font-family: Arial, sans-serif; 
