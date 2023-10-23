@@ -95,7 +95,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 200px); /* 3 columns with a fixed width of 200px */
     grid-auto-rows: 200px; /* Fixed height of 200px */
-    gap: 200px; /* Adjust the gap to your liking */
+    gap: 150px; /* Adjust the gap to your liking */
     /* max-width: 1200px; */
     width: 100%;
     justify-content: center; 
@@ -110,8 +110,8 @@ body {
     justify-content: center;
     border-radius: 10px; /* Rounded corners */
     overflow: hidden;
-    width: 350px; /* Same width as specified in the grid columns */
-    height:  350px; /* Same height as specified in the grid auto-rows */
+    width: 150%; /* Same width as specified in the grid columns */
+    height:  150%; /* Same height as specified in the grid auto-rows */
   }
   .grid-item:hover {
     transform: scale(1.05); /* Scale up on hover */
